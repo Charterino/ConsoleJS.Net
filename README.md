@@ -22,7 +22,7 @@ Console.WriteLine(codeRunner.Evaluate(jsCode));
 This will result in node_modules folder and package files created in your running directory.
 To avoid this and store all JS-related files in a separate directory, consider using a specified folder for the environment.
 Like this:
-```
+```cs
 //This code runner will run in a folder 'jsEnvWithAxios'. It will be automatically created and populated if it doesnt exist.
 var codeRunner = new JSCodeRunner("jsEnvWithAxios");
 codeRunner.InstallPackages("axios");
@@ -45,7 +45,7 @@ Console.WriteLine(codeRunner.Evaluate(jsCode));
 ```
 
 If you don't need any npm packages, you can run everything entirely in-memory.
-```
+```cs
 var codeRunner = new JSCodeRunner();
 var jsCode = @"
   console.log('Simple JS doesn't need any npm packages :3');
