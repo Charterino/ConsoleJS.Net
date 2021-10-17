@@ -31,6 +31,7 @@ namespace ConsoleJS.Net
             nodeProcess.StartInfo.Arguments = $" -e \"{script}\"";
             nodeProcess.StartInfo.UseShellExecute = false;
             nodeProcess.StartInfo.RedirectStandardOutput = true;
+            nodeProcess.StartInfo.RedirectStandardError = true;
             nodeProcess.StartInfo.WorkingDirectory = Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar + m_envPath;
             nodeProcess.Start();
 
